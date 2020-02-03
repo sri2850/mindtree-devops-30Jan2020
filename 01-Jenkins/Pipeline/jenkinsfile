@@ -19,6 +19,19 @@ node {
    sh label: '', script: 'mvn compile'
   }
   
+  
+  
+  
+    stage('Sonar Analysis'){        
+        withSonarQubeEnv('sonarqube'){
+         sh 'mvn sonar:sonar'
+            }
+}
+  
+  
+  
+  
+  
    stage('Maven-Test') {
    sh label: '', script: 'mvn test'
   }
