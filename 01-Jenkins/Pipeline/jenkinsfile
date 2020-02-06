@@ -51,7 +51,7 @@ node {
                     def uploadSpec= """{
                         "files": [{
                         "pattern": "/root/.jenkins/workspace/kumari/01-Jenkins/Code/petclinic/target/*.war",
-                        "target": "repo"}]
+                        "target": "example-repo-local"}]
                     }"""
         server.upload(uploadSpec)
         
@@ -63,7 +63,7 @@ node {
   
   
    stage('Docker-Stage-Deployment') {
-   sh label: '', script: 'docker-compose up -d --build'
+   sh label: '', script: 'sudo docker-compose up -d --build'
   }
  
   stage('Geting Ready For Ansible') {
