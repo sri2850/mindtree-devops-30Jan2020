@@ -3,7 +3,7 @@ variable "key_name" {
 }
 
 variable "pvt_key" {
-  default = "/root/.ssh/vasu.pem"
+  default = "/.ssh/vasu.pem"
 }
 
 variable "us-east-zones" {
