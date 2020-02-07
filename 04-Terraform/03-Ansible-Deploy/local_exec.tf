@@ -6,12 +6,12 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-1d"
   
 }
 
 resource "aws_instance" "backend" {
-  ami                    = "ami-0994c095691a46fb5"
+  ami                    = "ami-08bc77a2c7eb2b1da"
   instance_type          = "t2.micro"
   key_name               = "${var.key_name}"
   vpc_security_group_ids = ["${var.sg-id}"]
