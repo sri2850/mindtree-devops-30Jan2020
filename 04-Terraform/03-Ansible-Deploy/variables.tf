@@ -1,9 +1,9 @@
 variable "key_name" {
-  default = "kumari"
+  default = "vasu"
 }
 
 variable "pvt_key" {
-  default = "/root/.ssh/kumari.pem"
+  default = "/root/.ssh/vasu.pem"
 }
 
 variable "us-east-zones" {
@@ -11,5 +11,5 @@ variable "us-east-zones" {
 }
 
 variable "sg-id" {
-  default = "sg-0401035f11aeb4434"
+  default = "sg-0f3f9814a3d3fc215"
 }
